@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+				<meta charset="UTF-8">
+				<title>Mode display</title>
+				<link href="modeDisplay.css" type="text/css" rel="stylesheet">
+</head>
+
+
+<body>
+				<div class="container">
+			  	<main>Press the start button for your first random mode!</main>
+			  	<div class="buttons">
+				    <button type="button" id="bStart" onClick="buttonStart()">Start</button>
+		    </div>
+		    <div class="secondContainer">
+		      <p class="steps"></p>
+		      <p class="relLow"></p>
+		    </div>
+		    <div class="thirdContainer">
+		  				<button type="button" class="bButtons" id="buttonSteps" onClick="toggleSteps()">Toggle steps</button>
+		  				<button type="button" class="bButtons" id="buttonrelLow" onClick="toggleRelLow()">Toggle relative lowering</button>
+		    </div>
+				</div>
+				
+				
+				<div class="chooseFifth">
+						<p class="fifth"></p>
+		  		<label for="fifth">Choose a tone</label>
+			  	<select name="fifth" id="fifth">
+								<option value="C">C</option>
+								<option value="bD">bD</option>
+								<option value="D">D</option>
+								<option value="bE">bE</option>
+								<option value="E">E</option>
+								<option value="F">F</option>
+								<option value="bG">bG</option>
+								<option value="G">G</option>
+								<option value="bA">bA</option>
+								<option value="A">A</option>
+								<option value="bB">bB</option>
+								<option value="B">B</option>
+			  	</select>
+				  <button type="button" id="fifthButton" onClick="fifthButton()">Show scale changes</button>
+			 </div>
+				<script src="modeDisplay.js" type="text/javascript"></script>
+</body>
+</html>
