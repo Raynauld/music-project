@@ -5,6 +5,8 @@ let writeRelLow = document.querySelector('.relLow');
 let fifthOut = document.querySelector('.fifth');
 let btnFifth = document.querySelector('#fifthButton');
 let steps = document.querySelector('.steps');
+let interval;
+
 
 //global variables for buttons in thirdContainer
 
@@ -35,11 +37,31 @@ function randomMode () {
 	return mode;
 }
 
-//The button to start the random mode function
-function buttonStart () {
+function modeDisplay () {
 	main.innerHTML = randomMode();
+}
+
+//The buttons to start the random mode function
+function buttonStart () {
+	modeDisplay();
 	document.querySelector('#bStart').innerHTML = 'next random mode';
 }
+
+
+	
+  function buttonStartInterval () {
+	  modeDisplay();
+	  interval = setInterval(modeDisplay, 4000);
+	  
+	  
+	
+  }
+
+  function buttonStopInterval () {
+   	clearInterval(interval);
+	
+  }
+
 
 //For the buttons to show the relative distances
 function toggleSteps () {
